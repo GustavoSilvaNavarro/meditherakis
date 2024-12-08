@@ -1,9 +1,10 @@
-import { View, StyleSheet, ImageBackground } from 'react-native';
-import React from 'react';
-import { Text } from 'react-native-paper';
-import { TapButton } from '@/components';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import React from 'react';
+import { ImageBackground,StyleSheet, View } from 'react-native';
+import { Text } from 'react-native-paper';
+
+import { TapButton } from '@/components';
 import { RootStackParamList } from '@/types';
 
 const meditationHomeScreenImg = require('assets/images/mediation-home-screen.jpg');

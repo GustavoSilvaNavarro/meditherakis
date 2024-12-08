@@ -5,11 +5,11 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "lint": "eslint .",
     "start": "react-native start",
+    "lint": "eslint src/ __tests__/",
+    "lint-fix": "npx eslint src/ __tests__/ --fix",
     "format": "npx prettier --write src __tests__",
     "check": "prettier --check 'src/**/*.{js,ts,jsx,tsx}' '__tests__/**/*.{js,ts,jsx,tsx}' --loglevel=debug",
-
     "test": "jest"
   },
   "dependencies": {
@@ -39,6 +39,7 @@
     "babel-jest": "^29.6.3",
     "babel-plugin-module-resolver": "^5.0.2",
     "eslint": "^8.19.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "jest": "^29.6.3",
     "prettier": "^2.8.8",
     "react-test-renderer": "18.3.1",
