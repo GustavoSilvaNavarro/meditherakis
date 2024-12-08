@@ -6,14 +6,17 @@
  */
 
 import React from 'react';
-import { Home } from '@/screens';
+import { Router } from '@/router';
 // import { PaperProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { PaperProvider } from 'react-native-paper';
 
 function App(): React.JSX.Element {
   return (
     <SafeAreaProvider>
-      <Home />
+      <PaperProvider>
+      <Router />
+      </PaperProvider>
     </SafeAreaProvider>
   );
 }

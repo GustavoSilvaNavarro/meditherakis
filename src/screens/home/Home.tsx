@@ -1,13 +1,23 @@
-import { View, Text, StyleSheet, ImageBackground } from 'react-native';
+import { View, StyleSheet, ImageBackground } from 'react-native';
 import React from 'react';
+import { Text } from 'react-native-paper';
+import { TapButton } from '@/components';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '@/types';
 
 const meditationHomeScreenImg = require('assets/images/mediation-home-screen.jpg');
 
 export const Home = (): React.JSX.Element => {
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
   return (
     <ImageBackground source={meditationHomeScreenImg} style={styles.background} resizeMode="cover">
     <View style={styles.overlay}>
-      <Text style={styles.text}>Welcome to Daily Meditation</Text>
+      <Text style={styles.text} variant="displaySmall">My Meditation Moment</Text>
+      <View style={styles.buttonContainer}>
+        <TapButton onPress={() => navigation.navigate('MeditationDisplays')} />
+      </View>
     </View>
     </ImageBackground>
   );
@@ -27,7 +37,9 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#fff',
-    fontSize: 24,
-    fontWeight: 'bold',
+  },
+  buttonContainer: {
+    position: 'absolute',
+    bottom: 100,
   },
 });
