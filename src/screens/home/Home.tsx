@@ -13,12 +13,14 @@ export const Home = (): React.JSX.Element => {
 
   return (
     <ImageBackground source={meditationHomeScreenImg} style={styles.background} resizeMode="cover">
-    <View style={styles.overlay}>
-      <Text style={styles.text} variant="displaySmall">My Meditation Moment</Text>
-      <View style={styles.buttonContainer}>
-        <TapButton onPress={() => navigation.navigate('MeditationDisplays')} />
+      <View style={styles.overlay}>
+        <Text style={styles.text} variant="displaySmall">
+          My Meditation Moment
+        </Text>
+        <View style={styles.buttonContainer}>
+          <TapButton onPress={() => navigation.navigate('MeditationDisplays')} />
+        </View>
       </View>
-    </View>
     </ImageBackground>
   );
 };

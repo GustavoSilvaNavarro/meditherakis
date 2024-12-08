@@ -15,7 +15,7 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaProvider>
       <PaperProvider>
-      <Router />
+        <Router />
       </PaperProvider>
     </SafeAreaProvider>
   );
