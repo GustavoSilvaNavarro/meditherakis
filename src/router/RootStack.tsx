@@ -8,7 +8,7 @@ export const RootStack = () => {
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
-      <Stack.Screen name="MeditationDisplays" component={MeditationDisplays} />
+      <Stack.Screen name="MeditationDisplays" component={MeditationDisplays} options={{ headerTitle: '' }} />
     </Stack.Navigator>
   );
 };
