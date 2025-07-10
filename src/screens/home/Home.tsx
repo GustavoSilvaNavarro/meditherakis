@@ -6,7 +6,7 @@ import { Text } from 'react-native-paper';
 import { TapButton } from '@/components';
 import { RootStackParamList } from '@/types';
 
-const meditationHomeScreenImg = require('assets/images/mediation-home-screen.jpg');
+const meditationHomeScreenImg = require('@/assets/images/mediation-home-screen.jpg');
 
 export const Home = (): React.JSX.Element => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
