@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { Home, MeditationDisplays } from '@/screens';
+import { Home, MeditationDisplays, RecordQuotePage } from '@/screens';
 
 const Stack = createNativeStackNavigator();
 
@@ -9,6 +9,7 @@ export const RootStack = () => {
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
       <Stack.Screen name="MeditationDisplays" component={MeditationDisplays} options={{ headerTitle: '' }} />
+      <Stack.Screen name="RecordQuote" component={RecordQuotePage} />
     </Stack.Navigator>
   );
 };
